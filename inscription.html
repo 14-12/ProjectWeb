@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inscription</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d2cece;
+        }
+        .content{
+            
+            max-width: 400px;
+            padding: 30px;
+            box-sizing: border-box;
+            background: white;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+        }
+        
+        
+        .inscrire_button{
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .inscrire_button:hover{
+            background-color: #0056b3;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        } 
+        .label
+        {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }   
+        
+        input{
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        </style>
+</head>
+<body>
+   
+        <div class="content">
+            <h1>Inscription au Site</h1>
+            <form method="POST">
+                <!--<label for="name">Nom:*</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="last_name">prenom:*</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <br>
+                <label for="email">email:*</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="password">mot de passe:*</label>
+                <input type="password" id="password" name="password" required>
+                
+                <br>
+                <label for="telephone">telephone:*</label>
+                <input type="number" id="telephone" name="telephone" required>
+                <br>
+                <label for="dOb">date de naissance:*</label>
+                <input type="date" id="dOb" name="dOb" required>-->
+                
+                    <table>
+                        <tr>
+                            <td><label for="name" class="label">Nom:*</label></td>
+                            <td><input type="text" id="name" name="name" required pattern="[A-Za-z]" placeholder="Veuillez entrer un nom valide (lettres uniquement)" minlength="2"></td>
+                        
+                        </tr>
+                        <tr>
+                            <td><label for="last_name" class="label">prenom:*</label></td>
+                            <td><input type="text" id="last_name" name="last_name" required pattern="[A-Za-z]" placeholder="Veuillez entrer un prenom valide (lettres uniquement)" minlength="2"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email" class="label">email:*</label></td>
+                            <td><input type="email" id="email" name="email" required></td>            
+                        </tr>
+                        <tr>
+                            <td><label for="password" class="label">mot de passe:*</label></td>
+                            <td><input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>         
+                        </tr>
+                        <tr>
+                            <td><label for="telephone" class="label">telephone:*</label></td>
+                            <td><input type="text" id="telephone" name="telephone" required pattern="[0-9]{8}" placeholder="Veuillez entrer un numero de telephone valide(8chiffres)"></td>            
+                        </tr>
+                        <tr>
+                            <td><label for="dOb" class="label">date de naissance:*</label></td>
+                            <td><input type="date" id="dOb" name="dOb" required></td>          
+                        </tr>
+                    </table>
+                    <button onclick="togglePopup()" class="inscrire_button" name="submit">s'inscrire</button>
+            </form>
+        </div>
+    
+</body>
+</html>
